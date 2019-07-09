@@ -1,0 +1,775 @@
+ Resets */
+
+html	{
+	height: 100%;
+}
+
+img,video {
+	max-width: 100%;
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body,h1,h2,h3,h4,h5,h6,p,ul,ol,figure {
+	margin: 0;
+	padding: 0;
+	font-weight: lighter;
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+	margin: 0 0.5vw;
+}
+
+a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+.noDisplay{
+	display: none;
+}
+
+.displayBlock {
+	display: block;
+}
+
+/* Variáveis */
+
+:root {
+    
+    /* Tipografia */
+    --sans-serif-font: 'Open Sans', sans-serif;
+    --base-font-size:20px;
+    --medium-font-size:24px;
+    --big-font-size: 2rem; /* 30px */
+    --bigger-font-size: 3rem; /* 40px */
+    --small-font-size: 0.875rem; /* 14px */
+    
+        
+    /* Cores*/
+    --bordeaux: #A63067;
+    --blue: #00B7D1;
+	--white: white;
+	--grey:#989494;
+	--darkgrey: #434343;
+    --background-grey: #E6E6E6;
+    --foreground-white: white;
+
+
+    /*margens*/
+    --margin-intern: 3vw;
+    --margin-geral: 10vw;
+    --margin-medium: 7vw; 
+    --margin-small: 0.5vw;
+    --padding-geral: 1vw;
+}
+
+/* Estilos Gerais */
+
+body {
+	font-family: var(--sans-serif-font);
+    font-size: var(--base-font-size);
+    color: var(--blue);
+}
+
+.icon, .logo, .searchIcon, .logoFooter {
+	height: 2vw;
+	width: 2vw;
+	cursor: pointer;
+}
+
+/*          Botão para scroll up              */
+
+.push_up{
+	padding: 5px 10px;
+	position: fixed;
+	right: 5vw;
+	top: 85vh;
+	font-size: 50px;
+	color: var(--blue);
+	border: 2px solid var(--blue);
+	border-radius: 5px;
+	cursor: pointer;
+	display: none;
+	transition: 0.5s ease;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+	font-size: var(--medium-font-size);
+	height: 15vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0 var(--margin-geral);
+	align-items: center;
+}
+
+.navIntern {
+	display: flex;
+	justify-content: right;
+
+}
+
+.logo{
+	width: 11vw;
+	display: flex;
+}
+
+
+.logoText {
+	margin-left: var(--margin-small);
+	color: var(--bordeaux);
+	font-weight: 400;	
+}
+
+.dropBox {
+	position: relative;
+	left: var(--margin-geral);
+	margin-bottom: 3vh;
+}
+
+.searchBox {
+	font-size: var(--base-font-size);
+	height: 8vh;
+	width: 78.5vw;
+	border: 1px solid var(--blue);
+	padding-left: var(--padding-geral);
+}
+
+/* Banner */
+
+.bannerIndex {
+	font-weight: lighter;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 30vh;
+}
+
+.indexPunch h1{
+	font-size: var(--bigger-font-size);
+	font-weight: normal;
+}
+
+.highlight {
+	color:var(--bordeaux);
+	font-weight: normal;
+}
+
+/* Search Index */
+
+.search {
+	height: 55vh;
+	background-image: url(../images/doctor-banner.png);
+	background-position: center;
+	background-size: cover;
+}
+
+.bannerSearch, .searchButton, .seeAll, .indexTabs {
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.inputSearchbox {
+	margin-top: var(--margin-medium);
+	margin-bottom: var(--margin-intern);
+	height: 7vh;
+	width: 12vw;
+	padding-left: var(--padding-geral);
+	border: none;
+}
+
+.searchButton button{
+	height: 7vh;
+	width: 12vw;
+	margin-bottom: var(--margin-small);
+	border: none;
+	background: var(--blue);
+	color: var(--white);
+	font-size: var(--base-font-size);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.searchButton svg {
+	margin-left: var(--padding-geral);
+}
+
+
+/* Especialidade Container */
+
+.containerBox{
+	/*margin-top: var(--margin-intern);*/
+	margin-bottom: var(--margin-intern);
+
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	text-align: center;
+	margin: 0 var(--margin-geral);
+	margin-bottom: var(--margin-intern);
+}
+
+.container div{
+	margin: var(--margin-small) 0;
+}
+
+
+.indexTabs{
+	position: relative;
+	top: -7vh;
+}
+
+.boxedTab {
+	height: 7vh;
+	width: 15vw;
+	border: none;
+	background: var(--white);
+	color: var(--bordeaux);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.tabFaded {
+	opacity: 0.65;
+}
+
+
+
+/* Footer */
+
+.footer{
+	font-size: var(--medium-font-size);
+	height: 15vh;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-items: center;
+	background: var(--blue);
+	color:var(--white);
+}
+
+.logoFooter {
+	width: 11vw;
+	margin-left: var(--margin-geral);
+	display: inline-flex;
+	font-weight: normal;
+}
+
+.navFooter {
+	margin-right: var(--margin-geral);
+	text-align: right;
+}
+
+/*MEDICAL LIST*/
+
+/*Search Banner*/
+
+.searchBanner {
+	height: 12vh;
+	background: var(--blue);
+	color: var(--white);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchBanner h1 {
+	margin-left: var(--margin-geral);
+
+}
+
+.searchBar {
+	height: 7vh;
+	border: none;
+	padding-left: var(--padding-geral);
+	margin-right: var(--margin-geral);
+}
+
+/* Grid Resultados */
+
+.listGrid {
+	background: var(--background-grey);
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.filters {
+	width: 20vw;
+	padding-top: var(--margin-small);
+	margin-left: var(--margin-geral);
+	background:var(--foreground-white);
+	color: var(--grey);
+	padding-left: var(--padding-geral);
+}
+
+.filters li {
+	display: block;
+}
+
+.filtersWeb, .filtersWebArticles {
+	margin: var(--margin-small);
+}
+
+.filtersWeb a, .filtersWebArticles a{
+	color: var(--grey);
+}
+
+.filterSeguro, .filterEspecialidade, .filterArticles {
+	height: 22vh;
+	overflow: hidden;
+}
+
+.spacer {
+	margin: var(--margin-intern) auto;
+}
+
+.button, .buttonSeguro, .buttonEspecialidade, .buttonArticles{
+	color: var(--blue);
+	margin-top: var(--margin-small);
+	cursor: pointer;
+}
+
+.areasDif{
+	height: 7.5vh;
+	overflow: hidden;
+	color: var(--grey);
+	font-size: var(--small-font-size);
+}
+
+/* Resultados Medicos*/
+
+.medicResults {
+	margin-right: var(--margin-geral);
+	margin-top: var(--margin-small);
+	display: grid;
+	grid-template-columns: 10vw 45vw;
+	background:var(--foreground-white);
+}
+
+.listImage {
+	padding: var(--padding-geral);
+}
+
+.listImage img {
+	border-radius: 100px;
+	height: 20vh;
+}
+
+.listImage h5 {
+	position: relative;
+	bottom: -9vh;
+	cursor: pointer;
+}
+
+.listContent{
+	padding: var(--padding-geral);
+}
+
+.listContent h2{
+	margin-bottom: var(--margin-small);
+}
+
+.listContent h4{
+	margin-bottom: var(--margin-small);
+	color: var(--bordeaux);
+}
+
+.listContent h5{
+	margin-top: 2.7vh;
+	cursor: pointer;
+}
+
+.listContent p{
+	color: var(--grey);
+	font-size: var(--small-font-size);
+	margin-bottom: var(--margin-small);
+}
+
+.buttonReturn {
+	cursor: pointer;
+}
+
+.noResult {
+	width: 55vw;
+	height: 100vh;
+	margin-right: var(--margin-geral);
+	margin-top: var(--margin-small);
+	background:var(--foreground-white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/*  Lista de Artigos  */
+
+.articleResults {
+	width: 56vw;
+	margin-left: var(--margin-geral);
+	margin-top: var(--margin-small);
+	display: grid;
+	grid-template-columns: 20vw 1fr;
+	background:var(--foreground-white);
+}
+
+.articleFilters {
+	width: 20vw;
+	padding-top: var(--margin-small);
+	margin-left: var(--margin-intern);
+	background:var(--foreground-white);
+	color: var(--grey);
+	padding-left: var(--padding-geral);
+}
+
+.articleImage {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 100%;
+	height: auto;
+	margin-right: var(--padding-geral);
+}
+
+.articleContent p{
+	color: var(--grey);
+	font-size: var(--small-font-size);
+	margin-bottom: var(--margin-small);
+	padding-right: var(--padding-geral);
+	margin-right: var(--margin-small);
+}
+
+.articleContent h2{
+	color: var(--blue);
+	margin-bottom: var(--margin-small);
+}
+
+.articleContent h4{
+	color: var(--bordeaux);
+	margin-bottom: var(--margin-small);
+}
+
+.articleContent h5{
+
+	margin-bottom: var(--margin-small);
+}
+
+
+
+.articleButton {
+	height: 5vh;
+	width: auto;
+	padding:0 var(--padding-geral);
+	margin-top: var(--margin-small);
+	color: var(--white);
+	background-color: var(--blue);
+	border-radius: 100px;
+	text-align: center;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+/* Artigo Unico */
+
+.singleArticle {
+	width: 56vw;
+	margin-left: var(--margin-geral);
+	margin-top: var(--margin-small);
+	padding: var(--padding-geral);
+	background:var(--foreground-white);
+}
+
+.articleInfo {
+	color: var(--bordeaux);
+}
+
+
+
+/* Perfil Médico */
+
+.medicProfile {
+	background-color: var(--background-grey);
+	padding: var(--margin-intern) var(--margin-geral);
+}
+
+.medicBox {
+	background-color: var(--foreground-white);
+	height: auto;
+	display: grid;
+	grid-template-columns: 18vw 1fr;
+	padding: var(--margin-intern);
+}
+
+.medicInfo h1{
+	font-size: var(--big-font-size);
+	font-weight: normal;
+}
+
+.medicInfo h2{
+	color: var(--bordeaux);
+	font-size: var(--base-font-size);
+	margin-top: var(--margin-intern);
+}
+
+.medicInfo p{
+	color: var(--grey);
+}
+
+.profileMap{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.line {
+	opacity: 0.5;
+}
+
+/* Login Medico */
+
+.login	{
+	background-color: rgba(0,0,0,0.5);
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 90;
+}
+
+.closeLogin {
+	color: var(--white);
+	position: absolute;
+	top: 15%;
+	left: 80%;
+}
+
+.loginMed {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width: 60vw;
+	height: 50vh;
+	border-radius: 20px;
+	background-color: var(--bordeaux);
+	padding: var(--margin-intern);
+}
+
+.loginGrid {	
+	display: grid;
+	grid-template-columns: 1fr 1fr;	
+	margin:var(--margin-intern) 0;
+}
+
+.loginSocial , .loginInput{
+	margin: 0 auto;
+}
+
+.displayText {
+	color: var(--white);
+	text-align: center;
+}
+
+.displayText span{
+	color: var(--blue);
+	font-weight: normal;
+}
+
+.appLogin{
+	height: 5vh;
+	width: 20vw;
+	margin-top: var(--margin-small);
+}
+
+.facebookLogin{
+	background-color: #3443CF;
+	color: var(--white);
+	font-size: var(--small-font-size);
+	text-align: right;
+	padding-right: var(--padding-geral);
+}
+
+.googleLogin{
+	background-color: #CB4141;
+	color: var(--white);
+	font-size: var(--small-font-size);
+	text-align: right;
+	padding-right: var(--padding-geral);
+	}
+
+.linkedinLogin{
+	background-color: #4368FF;
+	color: var(--white);
+	font-size: var(--small-font-size);
+	text-align: right;
+	padding-right: var(--padding-geral);
+}
+
+.loginButton , .submit{
+	height: 5vh;
+	width: 8vw;
+	margin-top: var(--margin-small);
+	color: var(--white);
+	background-color: var(--blue);
+	border-radius: 100px;
+	text-align: center;
+	font-weight: normal;
+	cursor: pointer;
+}
+
+.loginText {
+	color: var(--white);
+	font-size: var(--small-font-size);
+	margin-top: var(--margin-intern);
+}
+
+.register{
+	color: var(--blue);
+	cursor: pointer;
+}
+
+/* Login Publico */
+
+.loginPub {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width: 60vw;
+	height: 50vh;
+	border-radius: 20px;
+	background-color: var(--blue);
+	padding: var(--margin-intern);
+}
+
+.loginPub .displayText span {
+	color: var(--bordeaux);
+}
+
+.loginPub .register {
+	color: var(--bordeaux);
+}
+
+.loginPub .loginButton {
+	height: 5vh;
+	width: 8vw;
+	margin-top: var(--margin-small);
+	color: var(--white);
+	background-color: var(--bordeaux);
+	border-radius: 100px;
+	text-align: center;
+	font-weight: normal;
+}
+
+/* Comentários */
+
+.comments {
+	width: 56vw;
+	margin-left: var(--margin-geral);
+	margin-top: var(--margin-small);
+	padding: var(--padding-geral);
+}
+
+.comments h3 {
+	margin-top: var(--margin-intern);
+	margin-bottom: var(--margin-small);
+}
+
+
+.comments .comments_contain .comment:last-of-type{
+	margin-bottom: var(--margin-intern);
+}
+
+.comments form {
+	margin-top: var(--space);
+}
+.comments form input[type="text"], form textarea{
+	width: 100%;
+	padding:10px 20px;
+	border: 1px solid #ccc;
+	margin-bottom: 14px;
+	background: none
+}
+.comments form textarea {
+	height: 100px;
+}
+
+.comments form button {
+	padding:10px 20px;
+	background: none;
+	border: 1px solid #ccc;
+	font-weight: bold;
+}
+
+.comment {
+	border: 1px solid var(--darkgrey);
+	margin-top: var(--margin-small);
+}
+
+.comment strong {
+	color: var(--bordeaux);
+	margin-left: var(--padding-geral);
+	padding-top: var(--padding-geral);
+}
+
+.comment .date {
+	color: var(--darkgrey);
+	font-size: var(--small-font-size);
+}
+
+.comment p {
+	color: var(--darkgrey);
+	font-size: var(--small-font-size);
+	width: 100%;
+	height: auto;
+	margin-top: var(--margin-small);
+	margin-left: var(--padding-geral);
+	margin-bottom: var(--padding-geral);
+}
+
+/* form de registro médico*/
+
+.form-format {
+	background-color: var(--background-grey);
+	padding: var(--margin-intern) var(--margin-geral);
+}
+
+.form-format form {
+	background-color: var(--foreground-white);
+	height: auto;
+	padding: var(--margin-intern);
+}
+
+.form-format form div , figure{
+	margin-bottom: var(--padding-geral);
+}
+
+.form-format form div label {
+	font-size: var(--normal-font-size);
+	font-weight: normal
+}
+
+.instituicoes_saude {
+	color: var(--grey);
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.instituicoesGrid {
+	height: auto;
+	width: 20vw;
+}
